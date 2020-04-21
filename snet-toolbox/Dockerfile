@@ -15,8 +15,12 @@ RUN yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/
 RUN cd /tmp; \
     curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh; \
     bash nodesource_setup.sh; \
-    apt install nodejs; \
+    apt-get install -y nodejs; \
     rm -f nodesource_setup.sh
+
+# Protobuf tools
+RUN apt-get install -y apt install protobuf-compiler; \
+    npm install -g ts-protoc-gen
 
 RUN pip install snet-cli
 
