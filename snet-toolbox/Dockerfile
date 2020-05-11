@@ -8,7 +8,7 @@ RUN mkdir -p ${SINGNET_REPOS}
 
 RUN apt-get update; \
     apt-get install -y \
-    python3.7-dev nano zsh libudev-dev libusb-1.0-0-dev
+    python3-dev nano zsh libudev-dev libusb-1.0-0-dev
 
 RUN yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
